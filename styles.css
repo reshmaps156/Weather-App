@@ -21,7 +21,7 @@
     height: 500px;
     max-width: 100%;
     /* border: 1px solid rgba(247, 247, 250, 0.2) ; */
-    background-color: rgba(0, 0, 0, 0.149);
+    background-color: rgba(0, 0, 0, 0.464);
    
 }
 
@@ -46,6 +46,8 @@
 .bigFont{
     font-size: 80px;
 }
+
+
 .weatherDetails{
     width: 40%;
     /* padding-left: 25px; */
@@ -58,13 +60,17 @@
   
 }
  input{
-    background-color: rgba(3, 133, 246, 0.021);
-    border: 1px solid rgba(16, 15, 15, 0.518);
+    background-color: rgba(246, 247, 248, 0.021);
+    border: 1px solid rgba(251, 248, 248, 0.518);
     width: 80%;
     position: absolute;
-
+    
   
 }
+::placeholder {
+    color: rgba(253, 252, 252, 0.871);
+    font-size: 15px;
+  }
 .btn{
     width: 10%;
     position: absolute;
@@ -73,6 +79,9 @@
 .subDetails{
     display: flex;
     justify-content: space-between;
+}
+.subDetails p{
+    color: rgb(196, 193, 193);
 }
 @media(max-width:800px){
     .bigFont{
