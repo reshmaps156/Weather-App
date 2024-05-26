@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     font-family: "Libre Franklin", sans-serif;
+   
+    
 }
 .main{
     width: 100%;
@@ -20,8 +22,9 @@
     margin: 10% auto;
     height: 500px;
     max-width: 100%;
+    border-radius: 40px;
     /* border: 1px solid rgba(247, 247, 250, 0.2) ; */
-    background-color: rgba(0, 0, 0, 0.464);
+    background-color: rgba(0, 0, 0, 0.668);
    
 }
 
@@ -39,7 +42,7 @@
 .currentWeather{
     position: absolute;
     z-index: 1;
-    bottom: 0;
+    bottom: 5%;
     padding-left: 20px;
     color: white;
 }
@@ -67,15 +70,24 @@
     
   
 }
+#weatherIcon{
+    width: 60px;
+    height: 60px;
+    
+}
+.time{
+    margin-bottom: -10px;
+}
 ::placeholder {
     color: rgba(253, 252, 252, 0.871);
     font-size: 15px;
   }
-.btn{
-    width: 10%;
-    position: absolute;
+.weatherCondition{
+    display: flex;
+    flex-direction: row;
     
 }
+
 .subDetails{
     display: flex;
     justify-content: space-between;
@@ -93,6 +105,8 @@
         height: 600px;
         margin: 0;
         padding: 0;
+        border-radius: 0;
+        
     }
     .weatherPic{
         width: 100%;

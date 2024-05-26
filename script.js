@@ -1,5 +1,5 @@
 apiKey = '214d7fcfd19cc427d1b52c92a128a686'
-city = 'chavakkad'
+city = 'leh'
 //      "url('https://source.unsplash.com/1600x900/?" + name + "')";
 
 //data fetching
@@ -48,6 +48,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&ap
                 minTemp.innerHTML = `${min_temp}°C`
                 maxTemp.innerHTML = `${max_temp} °C`
                 cityName.innerHTML = `${city}`
+                weatherIcon.innerHTML = `<img id="weatherIcon"  src=" https://openweathermap.org/img/wn/${weather_icon}@2x.png" alt="">`
 
 
                 //clock
