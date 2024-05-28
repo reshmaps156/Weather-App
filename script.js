@@ -1,7 +1,10 @@
 apiKey = '214d7fcfd19cc427d1b52c92a128a686'
+unsplashApiKey = '_U6MD-dw1-nAaKUgcGrJ9BSo0jXwxWXCC0f6gQq7qn0'
 document.getElementById('location').addEventListener("keydown",function (event){
     if(event.key == 'Enter'){
+        getBackground()
         getWeather()
+       
     }
 })
 document.getElementById('location').addEventListener("keydown",function (event){
@@ -53,8 +56,7 @@ function getWeather(){
             //maximum temperature
             let max_temp = weather.main['temp_max'].toFixed()
 
-            // https://openweathermap.org/img/wn/${weather_icon}@2x.png
-
+            
             temperature.innerHTML = `${temp}°C`
             weather__description.innerHTML = `${weatherDescription}`
             wind.innerHTML = `${windSpeed} m/s`
@@ -91,7 +93,25 @@ function getWeather(){
             get__day()
         })  .catch((err)=>alert(err.message))
 }
+function getBackground(){
+    let city =  document.getElementById('location').value
+    fetch(`https://api.unsplash.com/search/photos/?query=${city}&per_page=1&client_id=${unsplashApiKey}`).then((response)=>{
+        response.json().then((query)=>{
+            console.log(query.results[0].urls.regular)
+            let backgnd = query.results[0].urls.regular
+            changingBackground.innerHTML = `<img src="${backgnd}" alt="" id="bg"  >`
+        }
+            
+    )
+   
+        
+        
+    }).catch((err)=>{
+    console.log(err);
+})
+}
 
-//      "url('https://source.unsplash.com/1600x900/?" + name + "')";
+
+
 
 
