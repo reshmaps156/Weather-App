@@ -27,7 +27,7 @@
     margin: 10% auto;
     height: 500px;
     max-width: 100%; 
-    background-color: rgba(0, 0, 0, 0.668);
+    background-color: rgba(0, 0, 0, 0.404);
    
 }
 
@@ -51,7 +51,10 @@
     bottom: 5%;
     padding-left: 20px;
     color: white;
-}
+} 
+#cityName{
+        text-transform: capitalize;
+    }
 .bigFont{
     font-size: 80px;
 }
@@ -61,6 +64,8 @@
     width: 40%;
     /* padding-left: 25px; */
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.636);
+    
     
 }
 .searchBar{
@@ -103,7 +108,7 @@
 }
 @media(max-width:800px){
     .bigFont{
-        font-size: 40px;
+        font-size: 30px;
     }
     .weatherContainer{
         display: block;
@@ -129,6 +134,23 @@
     }
     .caption{
         color: black;
+    }
+    #cityName{
+        font-size: 20px;
+    }
+    #weatherIcon{
+        width: 50px;
+        height: 50px;
+        
+    }
+    #today{
+        font-size: 10px; 
+    }
+    #clock{
+        font-size: 10px; 
+    }
+    .weatherDetails{
+        background-color: white;
     }
     
 }
