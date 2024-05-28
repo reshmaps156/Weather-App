@@ -97,7 +97,7 @@ function getBackground(){
     let city =  document.getElementById('location').value
     fetch(`https://api.unsplash.com/search/photos/?query=${city}&per_page=1&client_id=${unsplashApiKey}`).then((response)=>{
         response.json().then((query)=>{
-            console.log(query.results[0].urls.regular)
+            
             let backgnd = query.results[0].urls.regular
             changingBackground.innerHTML = `<img src="${backgnd}" alt="" id="bg"  >`
         }
