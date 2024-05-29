@@ -68,29 +68,7 @@ function getWeather(){
             weatherImg.innerHTML = `<img id="weatherIcon"  src=" https://openweathermap.org/img/wn/${weather_icon}@2x.png" alt="">`
 
 
-            //clock
-            function getTime(){
-                const time = new Date()
-                const hour = time.getHours()
-                const min = time.getMinutes()
-                const second = time.getSeconds()
-                
-                clock.innerHTML = `${hour} : ${min} :${second} ${hour>12?'PM':'AM'}`
             
-                setTimeout(()=>{
-                    getTime()
-                },1000)
-            }
-            getTime()
-
-            //date
-            function get__day(){
-                const days = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"]
-                const d = new Date()
-                let day = days[d.getDay()]
-                today.innerHTML = `${day}`
-            }
-            get__day()
         })  .catch((err)=>alert(err.message))
 }
 function getBackground(){
@@ -110,6 +88,29 @@ function getBackground(){
     console.log(err);
 })
 }
+//clock
+function getTime(){
+    const time = new Date()
+    const hour = time.getHours()
+    const min = time.getMinutes()
+    const second = time.getSeconds()
+    
+    clock.innerHTML = `${hour} : ${min} :${second} ${hour>12?'PM':'AM'}`
+
+    setTimeout(()=>{
+        getTime()
+    },1000)
+}
+getTime()
+
+//date
+function get__day(){
+    const days = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"]
+    const d = new Date()
+    let day = days[d.getDay()]
+    today.innerHTML = `${day}`
+}
+get__day()
 
 
 
